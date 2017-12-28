@@ -1,5 +1,6 @@
 package intercept
 
+/*
 import (
 	"github.com/gin-gonic/gin"
 	. "gin-mysql-restful/models/user"
@@ -27,3 +28,6 @@ func UserIdentityPreHandle(c *gin.Context) (bool,UserIdentityError) {
 	err:=UserIdentityError{}
 	return true,err
 }
+*/
+
+

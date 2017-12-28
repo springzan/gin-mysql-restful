@@ -11,7 +11,7 @@ import (
 
 
 func GetPolicyApi(c *gin.Context) {
-	if !SignAndUser(c) {
+	if !SignUser(c) {
 		return
 	}
 

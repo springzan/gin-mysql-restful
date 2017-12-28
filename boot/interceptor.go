@@ -1,6 +1,6 @@
 package boot
 
-import (
+/*import (
 	"github.com/gin-gonic/gin"
 	. "gin-mysql-restful/boot/intercept"
 	"net/http"
@@ -48,4 +48,5 @@ func SignAndUser(c *gin.Context)  bool{
 		return false
 	}
 	return true
-}
+}*/
+

@@ -31,7 +31,7 @@ func ParseAuthInfo(c *gin.Context) AuthorizationInfo {
 	return authorizationInfo
 }
 
-func CheckSign(authorizationInfo AuthorizationInfo) bool{
+func (authorizationInfo AuthorizationInfo) CheckSign() bool{
 	signVersion:=authorizationInfo.SignVersion
 	originKey:=getOriginKeyBySignVersion(signVersion)
 	if originKey==""{
@@ -69,7 +69,7 @@ func md5Sum(key string) string {
 const SIGN_EXPIRE_SECONDS = "-10s"
 
 ///验证签名是否过期; 如果过期, 返回true
-func CheckTimeout(authorizationInfo AuthorizationInfo) bool {
+func (authorizationInfo AuthorizationInfo) CheckTimeout() bool {
 	signTimestamp:= authorizationInfo.SignTimestamp
 	fmt.Println(signTimestamp)
 	if signTimestamp==0{

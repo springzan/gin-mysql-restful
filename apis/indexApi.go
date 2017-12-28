@@ -7,7 +7,7 @@ import (
 )
 
 func IndexApi(c *gin.Context) {
-	accept:=SignButNoUser(c)
+	accept:=SignNoUser(c)
 	if !accept {
 		return
 	}

@@ -1,7 +1,7 @@
 package models
 
 import (
-	. "gin-mysql-restful/database"
+	. "gin-mysql-restful-demo/database/policydb"
 )
 
 type Policy struct {
@@ -13,7 +13,7 @@ type Policy struct {
 
 func (p Policy) GetOne() (policy Policy, err error) {
 
-	row := SqlDB.QueryRow("SELECT policy_id, company_id, brand_id,agent_id FROM policy WHERE policy_id=?", p.PolicyId)
+	row := PolicyDB.QueryRow("SELECT policy_id, company_id, brand_id,agent_id FROM policy WHERE policy_id=?", p.PolicyId)
 	if row == nil {
 		return
 	}
