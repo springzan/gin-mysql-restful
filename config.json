@@ -1,0 +1,37 @@
+{
+  "database":{
+    "user":{
+      "Dialect"      : "mysql",
+      "Database"     : "user",
+      "User"	       : "db",
+      "Password"     : "",
+      "Charset"      : "utf8",   /*要支持emoji的话，填 utf8mb4 */
+      "Host"         : "", /*数据库ip*/
+      "Port"         : 3306,        /*数据库端口*/
+      "MaxIdleConns" : 5,           /*空闲时最大的连接数*/
+      "MaxOpenConns" : 10           /*最大的连接数*/
+    },
+    "policy":{
+      "Dialect"      : "mysql",
+      "Database"     : "policy",
+      "User"	       : "db",
+      "Password"     : "",
+      "Charset"      : "utf8",   /*要支持emoji的话，填 utf8mb4 */
+      "Host"         : "", /*数据库ip*/
+      "Port"         : 3306,        /*数据库端口*/
+      "MaxIdleConns" : 5,           /*空闲时最大的连接数*/
+      "MaxOpenConns" : 10           /*最大的连接数*/
+    },
+    "risk":{
+      "Dialect"      : "mysql",
+      "Database"     : "risk",
+      "User"	       : "db",
+      "Password"     : "",
+      "Charset"      : "utf8",   /*要支持emoji的话，填 utf8mb4 */
+      "Host"         : "", /*数据库ip*/
+      "Port"         : 3306,        /*数据库端口*/
+      "MaxIdleConns" : 5,           /*空闲时最大的连接数*/
+      "MaxOpenConns" : 10           /*最大的连接数*/
+    }
+  }
+}
