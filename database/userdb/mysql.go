@@ -9,10 +9,10 @@ import (
 
 var UserDB *sql.DB
 
-const dbName  = "user"
+const dbCfNode  = "user"
 
 func init(){
-	dbConfig:=config.GetDBConfig(dbName)
+	dbConfig:=config.GetDBConfig(dbCfNode)
 	var err error
 	UserDB, err=sql.Open(dbConfig.Dialect, dbConfig.URL)
 	if err != nil{

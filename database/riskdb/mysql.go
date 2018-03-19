@@ -1,4 +1,4 @@
-package policydb
+package database
 
 import (
 	_ "github.com/go-sql-driver/mysql"
@@ -7,21 +7,21 @@ import (
 	"gin-mysql-restful/config"
 )
 
-var PolicyDB *sql.DB
+var RiskDB *sql.DB
 
-const dbCfNode  = "policy"
+const dbCfNode  = "risk"
 
 func init(){
 	dbConfig:=config.GetDBConfig(dbCfNode)
 	var err error
-	PolicyDB, err=sql.Open(dbConfig.Dialect, dbConfig.URL)
+	RiskDB, err=sql.Open(dbConfig.Dialect, dbConfig.URL)
 	if err != nil{
 		log.Fatal(err.Error())
 	}
-	PolicyDB.SetMaxOpenConns(dbConfig.MaxOpenConns)
-	PolicyDB.SetMaxIdleConns(dbConfig.MaxIdleConns)
+	RiskDB.SetMaxOpenConns(dbConfig.MaxOpenConns)
+	RiskDB.SetMaxIdleConns(dbConfig.MaxIdleConns)
 
-	err=PolicyDB.Ping()
+	err=RiskDB.Ping()
 	if err != nil{
 		log.Fatal(err.Error())
 	}
